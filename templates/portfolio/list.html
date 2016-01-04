@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="row">
+    <h1>Portfolio</h1>
+    {% for project in portfolio %}
+    <section class="col-md-4">
+        <a class="thumbnail" href="{% url 'portfolio:detail' project.slug %}"><img src="{{ MEDIA_URL }}/{{ project.featured_image.file_path }}" alt="{{ project.featured_image.title }}" /></a>
+        <h2>{{ project.title }}</h2>
+    </section>
+    {% endfor %}
+</div>
+{% endblock content %}
