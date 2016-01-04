@@ -1,0 +1,4 @@
+Django==1.9.1
+Pillow==3.0.0
+django-autoslug==1.9.3
+django-model-utils==2.4
